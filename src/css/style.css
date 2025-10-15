@@ -1,5 +1,7 @@
 @import 'tailwindcss';
 
 @theme {
-    --placeholder-color: #f7f7f7;
+    --gray-color: #f7f7f7;
+    --border-size-btn: #C1C1C1;
+    --overlay-color: #B3B3B3;
 }
