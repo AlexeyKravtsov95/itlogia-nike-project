@@ -72,13 +72,13 @@
         </aside>
     </header>
     <div id="overlay" class="fixed inset-0 bg-(--overlay-color)/50 z-9 hidden"></div>
-    <main class="w-full flex flex-col px-4">
-        <div class="flex flex-col pt-10">
+    <main class="w-full flex flex-col px-4 md:grid md:grid-cols-2 md:items-start md:gap-3 md:pt-10">
+        <div class="flex flex-col pt-10 md:hidden">
             <h1 class="mb-1 text-xl font-bold">Nike Air Force 1 ‘07</h1>
             <p class="mb-3 text-xs font-normal text-neutral-500">Women’s Shoe</p>
             <p class="text-base font-medium">$115</p>
         </div>
-        <div class="flex grow flex-col mb-3 pt-3 gap-1">
+        <div class="flex flex-col mb-3 pt-3 gap-1 md:col-start-1">
             <div class="relative w-full bg-neutral-100 flex justify-center badge">
                 <img src="./images/first_shoe.png" alt="First Shoe">
             </div>
@@ -92,50 +92,57 @@
                 <img src="./images/fourth_shoe.png" alt="Fourth Shoe">
             </div>
         </div>
-        <div class="flex flex-row mb-6 gap-2">
-            <div class="w-[52px] bg-neutral-100 rounded-sm border border-rounded">
-                <img src="./images/choosen_shoe_1.png" alt="">
+        <div class="flex flex-col">
+            <div class="hidden md:flex md:flex-col md:pt-1 md:mb-6">
+                <h1 class="mb-1 text-xl font-bold">Nike Air Force 1 ‘07</h1>
+                <p class="mb-3 text-xs font-normal text-neutral-500">Women’s Shoe</p>
+                <p class="text-base font-medium">$115</p>
             </div>
-            <div class="w-[52px] bg-neutral-100 rounded-sm">
-                <img src="./images/choosen_shoe_2.png" alt="">
+            <div class="flex flex-row mb-6 gap-2">
+                <div class="w-[52px] bg-neutral-100 rounded-sm border border-rounded">
+                    <img src="./images/choosen_shoe_1.png" alt="">
+                </div>
+                <div class="w-[52px] bg-neutral-100 rounded-sm">
+                    <img src="./images/choosen_shoe_2.png" alt="">
+                </div>
             </div>
-        </div>
-        <div class="flex justify-between items-center w-full mb-2">
-            <h3 class="text-xs font-medium">Select Size</h3>
-            <button class="text-xs font-medium text-neutral-500">Size Guide</button>
-        </div>
-        <div class="grid grid-cols-3 gap-2 mb-6" id="size-selector">
+            <div class="flex justify-between items-center w-full mb-2">
+                <h3 class="text-xs font-medium">Select Size</h3>
+                <button class="text-xs font-medium text-neutral-500">Size Guide</button>
+            </div>
+            <div class="grid grid-cols-3 gap-2 mb-6" id="size-selector">
 
-        </div>
+            </div>
 
-        <div class="flex flex-col gap-2 mb-6">
-            <button class="w-full bg-black text-white text-xs font-medium rounded-full py-4">Add to Bag</button>
+            <div class="flex flex-col gap-2 mb-6">
+                <button class="w-full bg-black text-white text-xs font-medium rounded-full py-4">Add to Bag</button>
 
-            <button class="w-full border border-neutral-300 py-4 rounded-full text-sm font-medium flex justify-center gap-2">
-                Favorite
-                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15.6301 3.45753C15.247 3.07428 14.7922 2.77026 14.2916 2.56284C13.791 2.35542 13.2545 2.24866 12.7126 2.24866C12.1707 2.24866 11.6342 2.35542 11.1336 2.56284C10.633 2.77026 10.1782 3.07428 9.79509 3.45753L9.00009 4.25253L8.20509 3.45753C7.43132 2.68376 6.38186 2.24906 5.28759 2.24906C4.19331 2.24906 3.14386 2.68376 2.37009 3.45753C1.59632 4.2313 1.16162 5.28075 1.16162 6.37503C1.16162 7.4693 1.59632 8.51876 2.37009 9.29253L3.16509 10.0875L9.00009 15.9225L14.8351 10.0875L15.6301 9.29253C16.0133 8.90946 16.3174 8.45464 16.5248 7.95404C16.7322 7.45345 16.839 6.91689 16.839 6.37503C16.839 5.83316 16.7322 5.2966 16.5248 4.79601C16.3174 4.29542 16.0133 3.84059 15.6301 3.45753V3.45753Z"
-                          stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button>
-        </div>
+                <button class="w-full border border-neutral-300 py-4 rounded-full text-sm font-medium flex justify-center gap-2">
+                    Favorite
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.6301 3.45753C15.247 3.07428 14.7922 2.77026 14.2916 2.56284C13.791 2.35542 13.2545 2.24866 12.7126 2.24866C12.1707 2.24866 11.6342 2.35542 11.1336 2.56284C10.633 2.77026 10.1782 3.07428 9.79509 3.45753L9.00009 4.25253L8.20509 3.45753C7.43132 2.68376 6.38186 2.24906 5.28759 2.24906C4.19331 2.24906 3.14386 2.68376 2.37009 3.45753C1.59632 4.2313 1.16162 5.28075 1.16162 6.37503C1.16162 7.4693 1.59632 8.51876 2.37009 9.29253L3.16509 10.0875L9.00009 15.9225L14.8351 10.0875L15.6301 9.29253C16.0133 8.90946 16.3174 8.45464 16.5248 7.95404C16.7322 7.45345 16.839 6.91689 16.839 6.37503C16.839 5.83316 16.7322 5.2966 16.5248 4.79601C16.3174 4.29542 16.0133 3.84059 15.6301 3.45753V3.45753Z"
+                              stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
 
-        <div class="text-xs mb-12">
-            <h3 class="font-bold mb-2">
-                Shipping
-            </h3>
-            <p class="font-medium mb-7">You'll see our shipping options at checkout.</p>
-            <p class="font-medium">The radiance lives on in the Nike Air Force 1 ’07, the b-ball icon that puts a
-                fresh spin on what you
-                know best: crisp leather, bold colors and the perfect amount of flash to make you shine. A subtle
-                platform gives you just the right amount of height.
-                <br><br>
-            </p>
-            <ul class="font-medium mb-7">
-                <li>Shown: White/White/White/White</li>
-                <li>Style: DD8959-100</li>
-            </ul>
-            <a href="#" class="font-bold underline">View Product Details</a>
+            <div class="text-xs mb-12">
+                <h3 class="font-bold mb-2">
+                    Shipping
+                </h3>
+                <p class="font-medium mb-7">You'll see our shipping options at checkout.</p>
+                <p class="font-medium">The radiance lives on in the Nike Air Force 1 ’07, the b-ball icon that puts a
+                    fresh spin on what you
+                    know best: crisp leather, bold colors and the perfect amount of flash to make you shine. A subtle
+                    platform gives you just the right amount of height.
+                    <br><br>
+                </p>
+                <ul class="font-medium mb-7">
+                    <li>Shown: White/White/White/White</li>
+                    <li>Style: DD8959-100</li>
+                </ul>
+                <a href="#" class="font-bold underline">View Product Details</a>
+            </div>
         </div>
     </main>
     <footer class="text-xs text-neutral-500 text-center font-medium py-[26px]">© 2025 Nike, Inc. All Rights Reserved
