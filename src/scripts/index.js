@@ -5,6 +5,9 @@ const openBtn = document.getElementById('open-menu');
 const closeBtn = document.getElementById('close-button');
 const overlay = document.getElementById('overlay');
 const sidebar = document.getElementById('sidebar');
+const isFavorite = true;
+const firstShoe = document.getElementById('first-shoe');
+const secondShoe = document.getElementById('second-shoe');
 
 const sizes = [
     { label: "EU 33", available: true },
@@ -47,4 +50,23 @@ openBtn.addEventListener('click', (event) => {
 closeBtn.addEventListener('click', (event) => {
     overlay.classList.add("hidden");
     sidebar.classList.add("hidden");
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+    const favoriteIcon = document.getElementById('favorite');
+    if(isFavorite) {
+        favoriteIcon.classList.add('fill-black');
+    }
 })
+
+firstShoe.addEventListener('click', (event) => {
+    secondShoe.classList.remove('border', 'border-rounded')
+    firstShoe.classList.add('border', 'border-rounded')
+
+})
+
+secondShoe.addEventListener('click', (event) => {
+    firstShoe.classList.remove('border', 'border-rounded')
+    secondShoe.classList.add('border', 'border-rounded')
+})
+

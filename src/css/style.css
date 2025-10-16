@@ -29,4 +29,30 @@
         height: 18px;
         z-index: 11;
     }
+
+    .underline-animate {
+        @apply relative
+        after:content-['']
+        after:absolute
+        after:bg-black
+        after:left-0
+        after:w-full
+        after:transition-transform
+        after:duration-200
+        hover:after:scale-x-100
+        after:h-0.5
+        after:-bottom-0.5
+        after:scale-x-0
+    }
+
+    .scale-search-animate {
+        @apply transition-all duration-200 ease-in-out;
+    }
+    .scale-search-animate:focus {
+        @apply scale-110
+    }
+
+    .fill-black {
+        @apply fill-black
+    }
 }
