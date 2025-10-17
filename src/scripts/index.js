@@ -5,7 +5,7 @@ const openBtn = document.getElementById('open-menu');
 const closeBtn = document.getElementById('close-button');
 const overlay = document.getElementById('overlay');
 const sidebar = document.getElementById('sidebar');
-const isFavorite = true;
+let isFavorite = false;
 const firstShoe = document.getElementById('first-shoe');
 const secondShoe = document.getElementById('second-shoe');
 
@@ -52,12 +52,16 @@ closeBtn.addEventListener('click', (event) => {
     sidebar.classList.add("hidden");
 });
 
-window.addEventListener('DOMContentLoaded', () => {
+document.getElementById('favorite-button').addEventListener('click', (event) => {
     const favoriteIcon = document.getElementById('favorite');
-    if(isFavorite) {
+    if (!isFavorite) {
         favoriteIcon.classList.add('fill-black');
+        isFavorite = true;
+    } else {
+        favoriteIcon.classList.remove('fill-black');
+        isFavorite = false;
     }
-})
+});
 
 firstShoe.addEventListener('click', (event) => {
     secondShoe.classList.remove('border', 'border-rounded')
@@ -68,5 +72,10 @@ firstShoe.addEventListener('click', (event) => {
 secondShoe.addEventListener('click', (event) => {
     firstShoe.classList.remove('border', 'border-rounded')
     secondShoe.classList.add('border', 'border-rounded')
+})
+
+document.getElementById('sidebar-menu').addEventListener('click', (event) => {
+    overlay.classList.add("hidden");
+    sidebar.classList.add("hidden");
 })
 

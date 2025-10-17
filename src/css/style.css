@@ -46,10 +46,11 @@
     }
 
     .scale-search-animate {
-        @apply transition-all duration-200 ease-in-out;
+        @apply transition-all duration-300 ease-in-out max-w-[136px];
     }
-    .scale-search-animate:focus {
-        @apply scale-110
+
+    .scale-search-animate:focus-within {
+        @apply max-w-[256px];
     }
 
     .fill-black {
